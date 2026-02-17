@@ -1,0 +1,360 @@
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: #0b1220;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.4);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+  border: 1px solid var(--border-soft);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INPUTS & FORMS
+========================================================= */
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.25);
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  /* Glass Effect */
+  background: rgba(15, 23, 42, 0.85);
+
+  /* Safari Support */
+  -webkit-backdrop-filter: blur(14px);
+
+  /* Standard */
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--border-soft);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-item {
+  color: var(--text-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--accent-primary);
+}
+
+.nav-item.active {
+  color: var(--accent-primary);
+  position: relative;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-primary);
+}
+
+
+/* =========================================================
+   RESPONSIVE NAVIGATION
+========================================================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    flex-direction: column;
+    background: rgba(15,23,42,0.95);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card,
+.chart-card,
+.intelligence-card {
+  background: rgba(22,31,46,0.85);
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  padding: 28px;
+
+  /* Safari support */
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Standard property */
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02),
+    0 12px 32px rgba(0,0,0,0.45);
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(56,189,248,0.12);
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: rgba(56,189,248,0.08);
+  color: var(--accent-primary);
+  border: 1px solid rgba(56,189,248,0.25);
+}
+
+.badge-success {
+  background: rgba(34,197,94,0.1);
+  color: #22c55e;
+}
+
+.badge-warning {
+  background: rgba(250,204,21,0.1);
+  color: #facc15;
+}
+
+.badge-danger {
+  background: rgba(239,68,68,0.1);
+  color: #ef4444;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-hero {
+  margin-bottom: 40px;
+}
+
+.page-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   INTELLIGENCE GRID
+========================================================= */
+
+.intelligence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.intelligence-grid div {
+  background: rgba(56,189,248,0.05);
+  border: 1px solid rgba(56,189,248,0.15);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+@media (max-width: 900px) {
+  .intelligence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.form-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.intelligence-metric span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.intelligence-metric strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.loading {
+  color: var(--accent-primary);
+  margin-top: 10px;
+}
+
+.error {
+  color: var(--accent-red);
+  margin-top: 10px;
+}
+.page-subtitle {
+  color: #002776;
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.card p {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.card ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 8px;
+  color: #ffffff;
+}
